@@ -4,3 +4,10 @@ body {
   padding: 2rem;
   background: #f2f0ef;
 }
+
+img {
+  width: 200px;
+  border-radius: 10px;
+  display: block;
+  margin: 1rem auto;
+}
