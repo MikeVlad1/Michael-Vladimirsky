@@ -53,10 +53,12 @@ body {
   text-align: center;
 }
 
-/* Individual tab backgrounds */
+/* Individual tab backgrounds 
+
 #About { background-color: red; }
 #Projects { background-color: green; }
 #Contact { background-color: blue; }
+*/
 
 /* Image layout */
 .row {
