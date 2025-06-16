@@ -22,7 +22,7 @@ body {
 .tablink {
   background-color: #555;
   color: white;
-  border: none;
+  border-radius: 25px;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
