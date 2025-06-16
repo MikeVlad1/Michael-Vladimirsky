@@ -1,61 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <script src="script.js"></script>
-
-
 <head>
   <meta charset="UTF-8" />
   <title>My Project</title>
   <link rel="stylesheet" href="styles.css" />
-  <div id="London" class="tabcontent">
-  <h1>London</h1>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h1>Paris</h1>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h1>Tokyo</h1>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<div id="Oslo" class="tabcontent">
-  <h1>Oslo</h1>
-  <p>Oslo is the capital of Norway.</p>
-</div>
-
-<button class="tablink" onclick="openCity('About', this, 'red')" id="defaultOpen">About</button>
-<button class="tablink" onclick="openCity('Projects', this, 'green')">Projects</button>
-<button class="tablink" onclick="openCity('Contact', this, 'blue')">Contact</button>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+  <!-- Tab buttons -->
+  <button class="tablink" onclick="openCity('About', this, 'red')" id="defaultOpen">About</button>
+  <button class="tablink" onclick="openCity('Projects', this, 'green')">Projects</button>
+  <button class="tablink" onclick="openCity('Contact', this, 'blue')">Contact</button>
 
-  <h1>Hi, I'm Mike 👋</h1>
-  <p>Welcome to my electrical engineering portfolio.</p>
-  <a href="https://github.com/yourusername">GitHub</a>
+  <!-- Tab content -->
+  <div id="London" class="tabcontent">
+    <h1>London</h1>
+    <p>London is the capital city of England.</p>
+  </div>
 
-  
-<div class="row">
-  <div class="column">
-    <img src="I tree.png" alt="Snow" style="width:100%">
+  <div id="Paris" class="tabcontent">
+    <h1>Paris</h1>
+    <p>Paris is the capital of France.</p>
   </div>
-  <div class="column">
-    <img src="L fire.png" alt="Forest" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="I charcoal.png" alt="Mountains" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="k monster.png" alt="Mountains" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="E robot.png" alt="Mountains" style="width:100%">
-  </div>
-</div>
 
+  <div id="Tokyo" class="tabcontent">
+    <h1>Tokyo</h1>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  <div id="Oslo" class="tabcontent">
+    <h1>Oslo</h1>
+    <p>Oslo is the capital of Norway.</p>
+  </div>
+
+  <!-- Image Row -->
+  <div class="row">
+    <div class="column">
+      <img src="I tree.png" alt="Snow" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="L fire.png" alt="Forest" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="I charcoal.png" alt="Mountains" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="k monster.png" alt="Mountains" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="E robot.png" alt="Mountains" style="width:100%">
+    </div>
+  </div>
 </body>
 </html>
