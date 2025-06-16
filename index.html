@@ -1,11 +1,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <script src="script.js"></script>
+
 
 <head>
   <meta charset="UTF-8" />
   <title>My Project</title>
   <link rel="stylesheet" href="styles.css" />
+  <div id="London" class="tabcontent">
+  <h1>London</h1>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h1>Paris</h1>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h1>Tokyo</h1>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Oslo" class="tabcontent">
+  <h1>Oslo</h1>
+  <p>Oslo is the capital of Norway.</p>
+</div>
+
+<button class="tablink" onclick="openCity('About', this, 'red')" id="defaultOpen">About</button>
+<button class="tablink" onclick="openCity('Projects', this, 'green')">Projects</button>
+<button class="tablink" onclick="openCity('Contact', this, 'blue')">Contact</button>
 </head>
 <body>
 
