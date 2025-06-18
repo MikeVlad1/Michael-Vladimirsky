@@ -84,3 +84,11 @@ body {
   border-radius: 10px;
 }
 
+.center_project {
+
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
