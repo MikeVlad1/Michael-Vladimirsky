@@ -122,7 +122,8 @@ body {
 }
 
 .center_project {
-
+  display: flex;
+  
   text-align:center;
   
 }
