@@ -86,6 +86,25 @@ body {
   
 }
 
+.flex-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.image-grid {
+  flex: 1;
+}
+
+.text-content {
+  max-width: 300px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
 .column img {
   display: block;
   margin: 0 auto;
@@ -108,7 +127,7 @@ display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  padding: 20px;
-
+  border: none;                    /* Removes default border */
+  border-radius: 25px; 
 
 }
