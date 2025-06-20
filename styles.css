@@ -122,8 +122,10 @@ body {
 }
 
 .center_project {
-  display: flex;
-  
+  display: block;
+  border: none;                    /* Removes default border */
+  border-radius: 30px;             /* Rounded corners */
+  appearance: none;  
   text-align:center;
   
 }
