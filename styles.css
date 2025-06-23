@@ -141,13 +141,13 @@ body {
 }
 
 .image-box {
-  width: 100%;
+  width: 45%;
   text-align: center;
 }
 
 .image-box img {
-  height: 80%;
-  width: 80%;
+   width: 100%;            /* Fills .image-box */
+  height: 100%; 
   border-radius: 10px;
   object-fit: cover;
   margin-bottom: 0.5rem;
