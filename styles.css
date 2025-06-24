@@ -40,6 +40,9 @@ text-decoration: none;
   margin: 5px;
 
   transition: background-color 0.3s ease, transform 0.1s ease;
+
+
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -47,6 +50,9 @@ text-decoration: none;
 /* Change background on hover */
 .tablink:hover {
   background-color: #777;
+    transform: scale(1) rotate(15deg);
+
+
 }
 
 /* Hide tab content by default */
