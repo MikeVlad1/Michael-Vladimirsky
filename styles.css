@@ -1,4 +1,7 @@
-* {
+* 
+
+
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,6 +19,7 @@ body {
   justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  font-family: monospace;
 }
 
 /* Style each button */
@@ -127,6 +131,11 @@ text-decoration: none;
   border-radius: 30px;             /* Rounded corners */
   appearance: none;  
   text-align:center;
+
+   width: 100%;
+  height: auto;
+   aspect-ratio: 4 / 3;
+  object-fit: cover;
   
 }
 .image-paragraph-grid {
