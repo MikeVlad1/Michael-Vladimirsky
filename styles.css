@@ -23,7 +23,14 @@ body {
 }
 
 
+.tab-header p {
 
+  margin-left: auto; 
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  color: white;
+  
+
+}
 
 
 /* Style each button */
