@@ -26,6 +26,7 @@ body {
 .tab-header .name {
 
   margin-left: auto; 
+  text-align: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
   color: white;
   
@@ -147,7 +148,6 @@ text-decoration: none;
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
   border: none;
   border-radius: 30px;
@@ -162,6 +162,8 @@ text-decoration: none;
   max-width: 1200px;
   margin: 2rem auto;
   font-family: sans-serif;
+  aspect-ratio: 4 / 3;
+
 }
 
 .image-box {
