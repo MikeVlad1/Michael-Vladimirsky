@@ -145,13 +145,19 @@ text-decoration: none;
 
 }
 
-.center_project {
-  width: 300px;            /* fixed width */
-  height: 200px;           /* fixed height */
-  object-fit: cover;       /* crop to fit aspect ratio */
+.image-wrapper1 {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 2;      /* or use padding-bottom trick */
+  overflow: hidden;
   border-radius: 30px;
+}
+
+.center_project {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  margin: auto;
 }
 
 
