@@ -27,6 +27,7 @@ body {
 .tab-header .name {
 
   margin-left: auto; 
+  align-items: center;
   text-align: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
   color: white;
