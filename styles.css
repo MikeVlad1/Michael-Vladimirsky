@@ -16,7 +16,7 @@ body {
 /* Center the tab buttons container */
 .tab-header {
   display: flex;
-  justify-content: space-between; /* spreads content to left and right */
+ 
   align-items: center;            /* vertical centering */
   flex-wrap: wrap;
   font-family: monospace;
