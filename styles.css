@@ -161,14 +161,19 @@ text-decoration: none;
   object-fit: cover;
   display: block;
   align-items: center;
+  display: flex;
+
 }
 
-.cetner_project_p {
-
+.center_project_p {
   padding: 5%;
-  font-family: monospace;
-
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.6;
 }
+
 
 
 .image-paragraph-grid {
