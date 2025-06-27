@@ -160,9 +160,15 @@ text-decoration: none;
   height: 40%;
   object-fit: cover;
   display: block;
+  align-items: center;
 }
 
+.cetner_project_p {
 
+  padding: 5%;
+  font-family: monospace;
+
+}
 
 
 .image-paragraph-grid {
@@ -196,6 +202,8 @@ text-decoration: none;
   line-height: 1.5;
   color: #333;
   text-decoration: none;
+    font-family: monospace;
+
 }
 
 
