@@ -159,9 +159,10 @@ text-decoration: none;
   width: 40%;
   height: 40%;
   object-fit: cover;
-  display: block;
-  align-items: center;
-  display: flex;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 
 }
 
@@ -172,6 +173,7 @@ text-decoration: none;
   margin: auto;
   font-size: 1rem;
   line-height: 1.6;
+  font-family: monospace;
 }
 
 
