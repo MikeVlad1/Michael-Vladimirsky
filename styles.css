@@ -277,40 +277,42 @@ text-decoration: none;
 
 .matrix-item img:hover {
   transform: scale(1.1);
-}/* --- Conveyor Belt Styles --- */
+}
+
 .conveyor-belt {
   width: 100%;
-  overflow: hidden; /* This crops the overflow */
-  background: #ffffff;
-  padding: 20px 0;
+  overflow: hidden;
+  background: #f2f0ef; /* Matches your background */
+  padding: 40px 0;
   display: flex;
 }
 
 .belt-inner {
   display: flex;
-  flex-wrap: nowrap; /* CRITICAL: Forces everything into one line */
-  width: max-content; 
-  animation: scroll 20s linear infinite;
+  width: max-content;
+  animation: scroll 30s linear infinite; /* Slower, more professional speed */
 }
 
-.conveyor-item {
-  flex: 0 0 auto; /* CRITICAL: Prevents items from shrinking or wrapping */
-  width: 300px;
-  margin: 0 20px;
+.matrix-item {
+  width: 500px; /* BIGGER: Increased from 300px */
+  margin: 0 30px; /* More spacing */
   text-align: center;
   text-decoration: none;
   color: black;
+  flex-shrink: 0;
 }
 
-.conveyor-item img {
-  width: 300px;
-  height: 200px;
+.matrix-item img {
+  width: 500px; /* Matches the item width */
+  height: 333px; /* Keeps aspect ratio (3:2) */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   display: block;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* Adds depth */
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Scrolls precisely half the total width */
+  /* Because of the 2 sets of 3, -50% is correct */
+  100% { transform: translateX(-50%); }
 }
