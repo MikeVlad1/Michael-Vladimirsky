@@ -280,31 +280,26 @@ text-decoration: none;
 }/* --- Conveyor Belt Styles --- */
 .conveyor-belt {
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* This crops the overflow */
   background: #ffffff;
   padding: 20px 0;
-  margin-top: 2rem;
+  display: flex;
 }
 
 .belt-inner {
   display: flex;
-  width: max-content;
+  flex-wrap: nowrap; /* CRITICAL: Forces everything into one line */
+  width: max-content; 
   animation: scroll 20s linear infinite;
 }
 
-/* Use a specific class for the belt items to avoid conflicts */
 .conveyor-item {
+  flex: 0 0 auto; /* CRITICAL: Prevents items from shrinking or wrapping */
   width: 300px;
-  margin: 0 15px;
+  margin: 0 20px;
   text-align: center;
   text-decoration: none;
   color: black;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.conveyor-item:hover {
-  transform: translateY(-5px);
 }
 
 .conveyor-item img {
@@ -313,10 +308,9 @@ text-decoration: none;
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); } /* Scrolls precisely half the total width */
 }
