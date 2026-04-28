@@ -277,39 +277,46 @@ text-decoration: none;
 
 .matrix-item img:hover {
   transform: scale(1.1);
-}
+}/* --- Conveyor Belt Styles --- */
 .conveyor-belt {
   width: 100%;
   overflow: hidden;
   background: #ffffff;
   padding: 20px 0;
+  margin-top: 2rem;
 }
 
 .belt-inner {
   display: flex;
-  width: max-content; /* Ensures it's only as wide as the items */
+  width: max-content;
   animation: scroll 20s linear infinite;
 }
 
-.matrix-item {
+/* Use a specific class for the belt items to avoid conflicts */
+.conveyor-item {
   width: 300px;
-  margin: 0 15px; /* Adjust spacing here */
+  margin: 0 15px;
   text-align: center;
   text-decoration: none;
   color: black;
-  flex-shrink: 0; /* Prevents items from squishing */
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.matrix-item img {
+.conveyor-item:hover {
+  transform: translateY(-5px);
+}
+
+.conveyor-item img {
   width: 300px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 @keyframes scroll {
-  /* Move exactly 50% of the total width (since you have 2 identical sets) */
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
