@@ -278,43 +278,38 @@ text-decoration: none;
 .matrix-item img:hover {
   transform: scale(1.1);
 }
-
-/* Container for the conveyor belt */
 .conveyor-belt {
-  display: flex;
   width: 100%;
-  overflow: hidden; /* Hides images off-screen */
-  white-space: nowrap;
-  background: #f0f0f0;
+  overflow: hidden;
+  background: #ffffff;
   padding: 20px 0;
 }
 
-/* The inner wrapper that moves */
 .belt-inner {
   display: flex;
-  animation: scroll 15s linear infinite;
+  width: max-content; /* Ensures it's only as wide as the items */
+  animation: scroll 20s linear infinite;
 }
 
-/* Force items to be the same size */
 .matrix-item {
-  min-width: 300px; /* Adjust width as needed */
   width: 300px;
-  height: 300px;
-  padding: 0 10px;
+  margin: 0 15px; /* Adjust spacing here */
   text-align: center;
   text-decoration: none;
   color: black;
+  flex-shrink: 0; /* Prevents items from squishing */
 }
 
 .matrix-item img {
   width: 300px;
-  height: 200px; /* Fixed height for consistency */
-  object-fit: cover; /* Ensures images are cropped to fit without distortion */
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
-/* The animation logic */
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  /* Move exactly 50% of the total width (since you have 2 identical sets) */
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
