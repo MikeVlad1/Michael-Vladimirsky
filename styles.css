@@ -253,3 +253,28 @@ text-decoration: none;
     button:hover {
       background: #555;
     }
+
+    .project-matrix {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+
+.matrix-item {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.matrix-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.matrix-item img:hover {
+  transform: scale(1.05);
+}
