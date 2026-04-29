@@ -8,9 +8,8 @@ body {
   font-family: sans-serif;
   padding: 2rem;
   background: #f2f0ef;
-  /* LOCKS THE ENTIRE PAGE WIDTH */
-  min-width: 1200px; 
-  overflow-x: auto; 
+  /* Removed the rigid 1200px lock so the page can scale */
+  overflow-x: hidden; 
 }
 
 /* Center the tab buttons container */
@@ -19,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-  flex-wrap: nowrap; /* PREVENTS TABS FROM STACKING */
+  flex-wrap: wrap; /* Allows buttons to wrap safely on tiny screens */
   font-family: monospace;
 }
 
@@ -30,7 +29,7 @@ body {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
   color: white;
   font-size: medium;
-  white-space: nowrap; /* PREVENTS NAME FROM WRAPPING */
+  white-space: nowrap;
 }
 
 /* Style each button */
@@ -51,10 +50,9 @@ body {
   margin: 5px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  white-space: nowrap; /* PREVENTS BUTTON TEXT FROM WRAPPING */
+  white-space: nowrap;
 }
 
-/* Change background on hover */
 .tablink:hover {
   background-color: #777;
   transform: scale(1.1) rotate(15deg);
@@ -68,25 +66,54 @@ body {
   text-align: center;
 }
 
-/* Other Grids and Contact Styles */
+/* =========================================
+   ABOUT PAGE: FLUID LAYOUT
+   ========================================= */
+
+.flex-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Lets text drop below images if screen is very narrow */
+}
+
+.image-grid { 
+  flex: 2; /* Takes up more space dynamically */
+  min-width: 300px;
+}
+
+.text-content {
+  flex: 1; /* Takes up remaining space dynamically */
+  min-width: 300px;
+  max-width: 580px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .row1, .row {
   display: flex;
   margin-bottom: 2rem;
-  flex-wrap: nowrap; /* PREVENTS IMAGES FROM DROPPING TO NEXT LINE */
+  flex-wrap: nowrap; /* Keeps letters on the same line */
+  width: 100%; /* Spans full available width */
+  gap: 2%; /* Fluid gap between letters */
 }
-.row1 { gap: 30px; }
-.row { gap: 1px; }
 
 .column {
-  flex: 0 0 150px; /* FORCES EXACT WIDTH */
-  width: 150px;
+  flex: 1; /* FLUID SIZING: allows items to shrink and grow equally */
   padding: 5px;
 }
 
 .column img {
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: 100%; /* Scales to fit the flex column */
+  height: auto;
+  max-width: 150px;
   border-radius: 10px;
   transition: transform 0.6s ease;
 }
@@ -95,54 +122,13 @@ body {
   transform: scale(1.9) rotate(360deg);
 }
 
-.flex-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0;
-  flex-wrap: nowrap; /* PREVENTS WRAPPING */
-}
-
-.image-grid { flex: 1; }
-
-.text-content {
-  width: 580px; /* FORCES EXACT WIDTH */
-  font-family: sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.image-wrapper1 {
-  width: 300px; /* FORCES EXACT WIDTH */
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-  border-radius: 30px;
-}
-
-.center_project {
-  width: 40%;
-  height: 40%;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.center_project_p {
-  padding: 5%;
-  text-align: center;
-  width: 800px; /* FORCES EXACT WIDTH */
-  margin: auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: monospace;
-}
-
+/* 2x2 Grid for About Page Images */
 .image-paragraph-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  width: 1200px; /* STRICT WIDTH, PREVENTS SQUISHING */
+  grid-template-columns: repeat(2, 1fr); /* 1fr = fluid fraction of the screen */
+  gap: 3vw; /* Fluid gap based on viewport width */
+  width: 100%;
+  max-width: 1200px;
   margin: 2rem auto;
   font-family: sans-serif;
 }
@@ -150,7 +136,7 @@ body {
 .image-box { text-align: center; }
 
 .image-box img {
-  width: 100%;
+  width: 100%; /* Follows the grid column size perfectly */
   height: auto;
   aspect-ratio: 4 / 3;
   border-radius: 10px;
@@ -167,8 +153,13 @@ body {
   font-family: monospace;
 }
 
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
 .contact-container {
-  width: 600px; /* STRICT WIDTH */
+  width: 100%; 
+  max-width: 600px; 
   margin: auto;
   background: white;
   padding: 2rem;
@@ -204,12 +195,11 @@ button {
 button:hover { background: #555; }
 
 /* =========================================
-   CONVEYOR BELT STYLES (EXACT MATH FIX)
+   CONVEYOR BELT STYLES 
    ========================================= */
 
 .conveyor-belt {
-  width: 100vw; /* Forces the belt background to span the full viewport if wider than 1200px */
-  min-width: 1200px;
+  width: 100vw; 
   overflow: hidden;
   padding: 40px 0;
   box-sizing: border-box;
@@ -225,7 +215,7 @@ button:hover { background: #555; }
 }
 
 .conveyor-item {
-  flex: 0 0 500px;
+  flex: 0 0 500px; /* Kept rigid so the animation loop doesn't break */
   width: 500px;
   margin: 0 30px; 
   display: flex;
