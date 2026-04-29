@@ -2,51 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Project</title>
+  <title>Automatic Saw Gauge | Michael Vladimirsky</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- Tab Buttons (Header) -->
   <div class="tab-header">
     <a class="tablink" href="index.html">About</a>
     <a class="tablink" href="Projects.html">Projects</a>
     <a class="tablink" href="Contact.html">Contact</a>
-<p class="name">
-
-      Michael Vladimirsky
-
-    </p>
+    <p class="name">Michael Vladimirsky</p>
   </div>
 
-
- <p class="center_project_p">
-While working at HandyCT, my Boss approached me with a problem: his workers were spending too much time measuring wood manually, and even then, human error often led to wasted material and frustration. He asked if I could come up with a solution, so I designed and built an automatic saw gauge to make the process faster and more accurate.
-
-The system is controlled by an Arduino Uno R3, which receives input through a 3x4 matrix keypad. Workers can simply type in the desired length, and the device uses a DM556T digital stepper driver to control a stepper motor, which moves a mechanical stop along a 40-inch bolt acting as a lead screw. Once in position, the worker can place the wood against the stop and cut, no measuring tape needed.
-
-  </p>
-
-
-  <div class="image-wrapper">
   
-    <img src="looking_saw_gauge.gif" alt="Computer man" class="center_project">
-  </div>
-  
- <p class="center_project_p">
-I built the control panel with a laser cut faceplate, housed it in a 3D-printed case, and mounted the components on a perf board. A 12V power supply powers the system, and a few buttons and relays handle direction, enabling, and system resets. The LCD screen displays position and user prompts, making it intuitive to use even for someone with no electronics background.
+        <p class="center_project_p">
+            Designing an automatic saw gauge to drastically improve shop efficiency. This system uses a motorized stop block that precisely positions itself based on numerical input, eliminating the need for constant manual tape-measuring during repetitive cuts. I designed the control circuitry and motor drivers to handle the dust and heavy vibration inherent in a woodworking environment.
+        </p>
+        <div class="image-wrapper">
+            <img src="moving_gauge.gif" alt="Automatic Saw Gauge" class="center_project" style="border-radius:10px; max-width:80%;">
+        </div>
+        
 
-This project blended practical engineering with real workplace needs and showed me how meaningful even small innovations can be when they solve real problems. It was also a great lesson in turning an idea into a working tool and seeing people actually use and rely on it.
-
-NOTE: Yes it's wobbly, but when you combine it with a 2 x 4 x 16' Construction/Framing Lumber wood, it isn't so wobbly anymore.
-
-
-  </p>
-
-  <div class="image-wrapper">
-  
-    <img src="moving_gauge.gif" alt="Computer man" class="center_project">
-  </div>
-
-  </body>
+</body>
+</html>
