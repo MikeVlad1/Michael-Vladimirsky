@@ -99,21 +99,23 @@ body {
   display: flex;
   margin-bottom: 2rem;
   flex-wrap: nowrap; /* Keeps letters on the same line */
-  width: 100%; /* Spans full available width */
-  gap: 2%; /* Fluid gap between letters */
+  width: 100%; 
+  gap: 15px; /* Use a fixed pixel gap for consistent letter spacing */
+  justify-content: flex-start; /* CRITICAL: Pushes all letters to the far left */
 }
 
 .column {
-  flex: 1; /* FLUID SIZING: allows items to shrink and grow equally */
-  padding: 5px;
+  /* CRITICAL: '0 1 120px' allows them to shrink on tiny screens, 
+     but stops them from growing to fill empty space on the right */
+  flex: 0 1 120px; 
+  padding: 0; /* Removed padding to keep alignment crisp */
 }
 
 .column img {
   display: block;
-  margin: 0 auto;
-  width: 100%; /* Scales to fit the flex column */
+  margin: 0; /* CRITICAL: Removed 'margin: 0 auto' which was centering them */
+  width: 100%; 
   height: auto;
-  max-width: 150px;
   border-radius: 10px;
   transition: transform 0.6s ease;
 }
