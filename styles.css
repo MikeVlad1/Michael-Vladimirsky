@@ -217,7 +217,7 @@ button:hover { background: #555; }
   align-items: center;
   width: max-content;
   /* We will use a custom property for the exact width of 1 set */
-  animation: scroll 25s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .conveyor-item {
