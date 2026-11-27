@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ElectroFlow - Coag PCB | Michael Vladimirsky</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
@@ -15,14 +16,15 @@
     <p class="name">Michael Vladimirsky</p>
   </div>
 
-  
-        <p class="center_project_p">
-            This is a coagulation PCB designed as part of a medical technology project. The board delivers precise thermal energy to tissue to stop bleeding during surgical procedures. Designing this required strict adherence to electrical safety standards for medical devices, ensuring proper isolation boundaries and fail-safes.
-        </p>
-        <div class="image-wrapper">
-            <img src="electroflow.jpg" alt="ElectroFlow - Coag PCB" class="center_project" style="border-radius:10px; max-width:80%;">
-        </div>
-        
+  <p class="center_project_p">
+    ElectroFlow is my IPPD senior design project, sponsored by Arthrex: a new bipolar RF probe for open orthopedic surgery that runs on an existing Arthrex RF console. I am the team lead (a team of 7) and the electrical lead, and I led the electrical design, including the coagulation (coag) PCB.
+  </p>
+  <div class="image-wrapper">
+    <img src="electroflow.webp" alt="ElectroFlow RF probe prototypes" class="center_project">
+  </div>
+  <p class="center_project_p">
+    Medical devices have to limit how much stray current can flow through the patient, so leakage current was a key requirement. Our measured leakage was 40 mA and 20 mA, well under the 150 mA limit, and we delivered 3 working prototypes against the 2 that were required.
+  </p>
 
 </body>
 </html>

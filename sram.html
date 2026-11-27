@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRAM Array Decoders | Michael Vladimirsky</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="tab-header">
+    <a class="tablink" href="index.html">About</a>
+    <a class="tablink" href="Projects.html">Projects</a>
+    <a class="tablink" href="Contact.html">Contact</a>
+    <p class="name">Michael Vladimirsky</p>
+  </div>
+
+  <p class="center_project_p">
+    This is my final project for the VLSI design course (EEE4310/5322): designing an SRAM memory array in Cadence on a 45 nm process. It is a group project, and I am taking the graduate-section version, which specifies an array of 4 rows by 6 columns.
+  </p>
+
+  <div class="image-wrapper">
+    <img src="sram_block_diagram.svg" alt="Simplified block diagram of a 4 x 6 SRAM array with row and column decoders" class="center_project" style="width:100%; max-width:640px; background:#f7f6f5;">
+  </div>
+  <p class="center_project_caption">Simplified block diagram for illustration (not a Cadence screenshot).</p>
+
+  <p class="center_project_p">
+    <strong>What an SRAM array is.</strong> SRAM is the fast memory built into processors, used for caches and registers. The array is a grid of tiny storage cells. To read or write one cell, the chip has to pick exactly one row and one column out of the grid.
+  </p>
+
+  <p class="center_project_p">
+    <strong>My part: the row and column decoders.</strong> A decoder turns a binary address into a single active line. The row decoder takes the row address and switches on one of the 4 word lines, which activates one row of cells. The column decoder takes the column address and selects which of the 6 columns is connected to the read/write path.
+  </p>
+
+  <p class="center_project_p">
+    <strong>Verification.</strong> A layout is only usable if it passes two checks. DRC (design rule check) confirms the drawn shapes follow the manufacturing rules for the 45 nm process. LVS (layout versus schematic) confirms the layout is electrically the same circuit as the schematic. My row decoder layout passes both DRC and LVS, and the column decoder layout is complete.
+  </p>
+
+  <p class="center_project_p">
+    <strong>Tools:</strong> Cadence (schematic and layout), 45 nm process. The full array is a team effort; this page covers my decoders.
+  </p>
+
+</body>
+</html>

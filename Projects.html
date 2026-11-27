@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Michael Vladimirsky</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
@@ -10,40 +11,66 @@
 
 <div class="tab-header">
     <a class="tablink" href="index.html">About</a>
-    <a class="tablink" href="Projects.html">Projects</a>
+    <a class="tablink" href="Projects.html" style="transform:rotate(15deg);">Projects</a>
     <a class="tablink" href="Contact.html">Contact</a>
     <p class="name">Michael Vladimirsky</p>
 </div>
 
 <div class="conveyor-belt">
+  <!-- 3 cards repeated 4x. The animation scrolls by exactly one set (3 cards x 560px = 1680px),
+       so the loop is seamless on screens up to ~5000px wide. Repeats are hidden from screen readers. -->
   <div class="belt-inner">
-    
     <a href="electrical.html" class="conveyor-item">
-      <img src="automatic_saw_gauge.jpg" alt="Electrical Projects">
+      <img src="keyboard_pcb.png" alt="Electrical Projects">
       <h3>Electrical Projects</h3>
     </a>
     <a href="3d_prints.html" class="conveyor-item">
-      <img src="3D_printing_projects.png" alt="3D Print Projects">
+      <img src="3D_printing_projects.webp" alt="3D Print Projects">
       <h3>3D Print Projects</h3>
     </a>
     <a href="fpga_asic.html" class="conveyor-item">
-      <img src="FPGA_projects.png" alt="FPGA/ASIC Projects">
+      <img src="FPGA_projects.webp" alt="FPGA/ASIC Projects">
       <h3>FPGA/ASIC Projects</h3>
     </a>
 
-    <a href="electrical.html" class="conveyor-item">
-      <img src="automatic_saw_gauge.jpg" alt="Electrical Projects">
+    <a href="electrical.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="keyboard_pcb.png" alt="">
       <h3>Electrical Projects</h3>
     </a>
-    <a href="3d_prints.html" class="conveyor-item">
-      <img src="3D_printing_projects.png" alt="3D Print Projects">
+    <a href="3d_prints.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="3D_printing_projects.webp" alt="">
       <h3>3D Print Projects</h3>
     </a>
-    <a href="fpga_asic.html" class="conveyor-item">
-      <img src="FPGA_projects.png" alt="FPGA/ASIC Projects">
+    <a href="fpga_asic.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="FPGA_projects.webp" alt="">
       <h3>FPGA/ASIC Projects</h3>
     </a>
-    
+
+    <a href="electrical.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="keyboard_pcb.png" alt="">
+      <h3>Electrical Projects</h3>
+    </a>
+    <a href="3d_prints.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="3D_printing_projects.webp" alt="">
+      <h3>3D Print Projects</h3>
+    </a>
+    <a href="fpga_asic.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="FPGA_projects.webp" alt="">
+      <h3>FPGA/ASIC Projects</h3>
+    </a>
+
+    <a href="electrical.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="keyboard_pcb.png" alt="">
+      <h3>Electrical Projects</h3>
+    </a>
+    <a href="3d_prints.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="3D_printing_projects.webp" alt="">
+      <h3>3D Print Projects</h3>
+    </a>
+    <a href="fpga_asic.html" class="conveyor-item" aria-hidden="true" tabindex="-1">
+      <img src="FPGA_projects.webp" alt="">
+      <h3>FPGA/ASIC Projects</h3>
+    </a>
   </div>
 </div>
 

@@ -18,10 +18,13 @@ function openTab(tabName, elmnt, color) {
   elmnt.style.backgroundColor = color;
 }
 
-// Open default tab on page load
-window.onload = function() {
-  document.getElementById("defaultOpen").click();
-};
+// Open default tab on page load (only on pages that actually have one)
+window.addEventListener("load", function() {
+  var defaultTab = document.getElementById("defaultOpen");
+  if (defaultTab) {
+    defaultTab.click();
+  }
+});
 
 
 
