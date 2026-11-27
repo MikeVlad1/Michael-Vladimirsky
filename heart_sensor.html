@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IR Receiver and Heart Rate Monitor | Michael Vladimirsky</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
@@ -28,30 +29,30 @@ Part I involved characterizing the I-V behavior of an IR LED and IR photodiode u
   </p>
 
   <div class="image-wrapper">
-    <img src="IR_LED_AND_PHOTO.jpg" alt="Computer man" class="center_project">
+    <img src="IR_LED_AND_PHOTO.jpg" alt="IR LED and IR photodiode on a breadboard" class="center_project">
   </div>
   <p class="center_project_p">
       To measure the effect of IR illumination on the photodiode’s I-V curve, I first recorded the I-V characteristics without any IR light. Then, I set up a separate circuit with a 5V supply and 100 Ω resistor to power an IR LED. I aimed the LED directly at the photodiode and measured the I-V curve again.
       </p>
 
        <div class="image-wrapper">
-    <img src="IV_DROP.jpg" alt="Computer man" class="center_project">
+    <img src="IV_DROP.jpg" alt="I-V curves of the photodiode with and without IR light" class="center_project">
   </div>
   <p class="center_project_p">
     With the IR light on, the I-V curve shifted downward, indicating increased photocurrent due to IR exposure. Blocking the light caused the curve to return to its original position, confirming the photodiode’s response to IR. I quantified the change by comparing current values at specific voltages with and without illumination.
 
       </p>
 <div class="image-wrapper">
-    <img src="op_amp_ir.jpg" alt="Computer man" class="center_project">
-    <img src="Remote_photo.jpg" alt="Computer man" class="center_project">
+    <img src="op_amp_ir.jpg" alt="Schematic of the IR receiver op-amp circuit" class="center_project">
+    <img src="Remote_photo.jpg" alt="Oscilloscope capture of the IR signal" class="center_project">
   </div>
   <p class="center_project_p">
 The heart beat through a finger is shown down below. Equation to find heart rate: 1/(change in time) * 60 (for BPM)
       </p>
 
       <div class="image-wrapper">
-    <img src="finger_beat.jpg" alt="Computer man" class="center_project">
-    <img src="apple_watch_beat.jpg" alt="Computer man" class="center_project">
+    <img src="finger_beat.jpg" alt="Fingertip on the IR sensor circuit" class="center_project">
+    <img src="apple_watch_beat.jpg" alt="Heart-rate calculation of 100 BPM next to a smartwatch reading" class="center_project">
   </div>
   <p class="center_project_p">
 The heart beat through a finger is shown down below, the rate was achieved via exercise (A friend and I maxed out on pushups and jumping jacks)
@@ -59,6 +60,10 @@ The heart beat through a finger is shown down below, the rate was achieved via e
 
       <p class="center_project_p">
         Overall, a fun project!
+      </p>
+
+      <p class="center_project_p">
+        <a href="diode_applications_report.pdf">Full annotated report (PDF)</a>
       </p>
 
 

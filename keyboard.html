@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keyboard x Joystick PCB | Michael Vladimirsky</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="tab-header">
+    <a class="tablink" href="index.html">About</a>
+    <a class="tablink" href="Projects.html">Projects</a>
+    <a class="tablink" href="Contact.html">Contact</a>
+    <p class="name">Michael Vladimirsky</p>
+  </div>
+
+  <p class="center_project_p">
+    A keyboard and a gamepad in one device. Hall-effect sensors in the keys measure how far each key is pressed instead of just on or off, and a Nintendo Switch-style rotary D-pad handles directional input. This project is still in progress.
+  </p>
+  <div class="image-wrapper">
+    <img src="keyboard_pcb.png" alt="KiCad 3D render of the Keyboard x Joystick PCB" class="center_project">
+  </div>
+  <p class="center_project_p">
+    The brain is an RP2040 microcontroller. It has two cores, so one core polls and debounces the keyboard matrix while the other reads the controller inputs, and the device connects over USB-C. I designed the PCB in KiCad. The main engineering challenge is crosstalk between closely packed Hall sensors, which makes calibration important. Planned firmware includes a sensor calibration loop, outlier rejection, the D-pad logic and the USB stack.
+  </p>
+
+</body>
+</html>

@@ -137,14 +137,33 @@ body {
 
 .image-box { text-align: center; }
 
-.image-box img {
+.image-box a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.image-box img,
+.image-box video {
+  display: block;
   width: 100%; /* Follows the grid column size perfectly */
   height: auto;
   aspect-ratio: 4 / 3;
   border-radius: 10px;
   object-fit: cover;
   margin-bottom: 0.75rem;
-  text-decoration: none;
+}
+
+/* Tall or square media: show the whole frame instead of cropping it to 4:3 */
+.image-box .fit-contain {
+  object-fit: contain;
+  background: #e4e1df;
+}
+
+/* Media smaller than its card: never upscale it (keeps it sharp) */
+.image-box .fit-native {
+  object-fit: scale-down;
+  background: #e4e1df;
 }
 
 .image-box p {
@@ -201,7 +220,9 @@ button:hover { background: #555; }
    ========================================= */
 
 .conveyor-belt {
-  width: 100vw; 
+  /* Span the full page width, cancelling the body padding */
+  width: calc(100% + 4rem);
+  margin: 0 -2rem;
   overflow: hidden;
   padding: 40px 0;
   box-sizing: border-box;
@@ -233,9 +254,13 @@ button:hover { background: #555; }
   transform: scale(1.03); 
 }
 
+.belt-inner:hover {
+  animation-play-state: paused;
+}
+
 .conveyor-item img {
-  width: 100%; 
-  height: 350px; 
+  width: 100%;
+  height: 350px;
   object-fit: cover; 
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
@@ -253,4 +278,88 @@ button:hover { background: #555; }
 @keyframes scroll {
   0% { transform: translateX(0px); }
   100% { transform: translateX(-1680px); } 
+}
+
+/* =========================================
+   PROJECT DETAIL PAGES
+   ========================================= */
+
+.center_project_p {
+  max-width: 820px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  font-family: sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.center_project_p a {
+  color: #333;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+}
+
+/* Never stretched past native size, never taller than the viewport */
+.center_project {
+  display: block;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.center_project_caption {
+  max-width: 820px;
+  margin: -0.5rem auto 1.5rem;
+  padding: 0 1rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #666;
+}
+
+/* About page portrait */
+.text-content img,
+.text-content video {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+/* =========================================
+   SMALL SCREENS / ACCESSIBILITY
+   ========================================= */
+
+@media (max-width: 700px) {
+  body { padding: 1rem; }
+
+  .image-paragraph-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .conveyor-belt {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .belt-inner { animation: none; }
+  .column img:hover,
+  .tablink:hover { transform: none; }
 }
